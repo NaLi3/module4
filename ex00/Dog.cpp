@@ -6,11 +6,11 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 11:58:18 by ilevy             #+#    #+#             */
-/*   Updated: 2025/03/11 12:08:44 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/03/18 11:22:46 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Animal.hpp"
 #include "Dog.hpp"
 #include <iostream>
 
@@ -26,16 +26,16 @@ Dog::Dog( const std::string& type_var )
 	std::cout << BLUE << "Parameterized constructor called for Dog! The type is currently " << this->type << RESET <<std::endl;
 }
 
-Dog::Dog( const Dog& copy )
+Dog::Dog( const Dog& copy ): Animal(copy)
 {
-	if (this != &copy)
-		*this = copy;
+	this->type = copy.type;
 	std::cout << BLUE << "Copy constructor called for Dog! The type is currently " << this->type << RESET <<std::endl;
 }
 
 Dog& Dog::operator=( const Dog& copy )
 {
-	this->type = copy.type;
+	if (this != &copy)
+		this->type = copy.type;
 	std::cout << BLUE << "Copy assignment operator called for Dog! The type is currently " << this->type << RESET <<std::endl;
 	return (*this);
 }

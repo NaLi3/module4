@@ -6,7 +6,7 @@
 #    By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 11:36:15 by ilevy             #+#    #+#              #
-#    Updated: 2025/03/11 13:44:13 by ilevy            ###   ########.fr        #
+#    Updated: 2025/03/18 11:44:48 by ilevy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,10 @@ CPP_FILES:= main.cpp Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 O_FILES:= $(addprefix $(O_DIR), $(CPP_FILES:.cpp=.o))
 
 #To make my makefile faaaaabulouuuuuuus:
-GREEN := \033[32m
-YELLOW := \033[33m
-RED := \033[31m
-CYAN := \033[36m
+GREEN := "\033[32m"
+YELLOW := "\033[33m"
+RED := "\033[31m"
+CYAN := "\033[36m"
 MAGENTA:= \033[35m
 BLUE := \033[34m
 RESET := \033[0m

@@ -14,16 +14,16 @@ WrongCat::WrongCat( const std::string& type_var )
 	std::cout << BLUE << "Parameterized constructor called for WrongCat! The type is currently " << this->type << RESET <<std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat& copy )
+WrongCat::WrongCat( const WrongCat& copy ): WrongAnimal(copy)
 {
-	if (this != &copy)
-		*this = copy;
+	this->type = copy.type;
 	std::cout << BLUE << "Copy constructor called for WrongCat! The type is currently " << this->type << RESET <<std::endl;
 }
 
 WrongCat& WrongCat::operator=( const WrongCat& copy )
 {
-	this->type = copy.type;
+	if (this != &copy)
+		this->type = copy.type;
 	std::cout << BLUE << "Copy assignment operator called for WrongCat! The type is currently " << this->type << RESET <<std::endl;
 	return (*this);
 }
