@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 11:36:10 by ilevy             #+#    #+#             */
-/*   Updated: 2025/03/11 12:03:50 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/03/18 12:24:35 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Animal
 		Animal( const std::string& type );
 		Animal( const Animal& copy );
 		Animal& operator=( const Animal& copy );
-		~Animal( void );
+		virtual ~Animal( void );
 
 		virtual void makeSound( void ) const;
 		virtual std::string getType( void ) const;

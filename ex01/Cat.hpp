@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 11:38:24 by ilevy             #+#    #+#             */
-/*   Updated: 2025/03/11 12:06:09 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/03/18 12:14:26 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
+# include "Brain.hpp"
 # include "Animal.hpp"
 # include <iostream>
 
 class Cat:public Animal
 {
+	private:
+		Brain *brain;
 	public:
 		Cat( void );
 		Cat( const std::string& type );
