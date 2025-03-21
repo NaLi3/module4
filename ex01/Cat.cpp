@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 11:45:54 by ilevy             #+#    #+#             */
-/*   Updated: 2025/03/21 11:48:19 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/03/21 14:44:01 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,9 @@ void	Cat::compareCat( const Cat& comp )
 	std::cout << "\nWe'll compare two cats here and test their copy depth" << std::endl;
 	std::cout << "Here is the memory address of my cat's brain: " << (void *)this->brain << std::endl;
 	std::cout << "Here is the memory address of the compared cat's brain: " << (void *)comp.brain << std::endl;
+	std::cout << "And here are the values of the ideas in my cat's brain:" << std::endl;
+	this->brain->showIdeas();
+	std::cout << "\nAnd the compared cat's ideas\n" << std::endl;
+	comp.brain->showIdeas();
+	std::cout << std::endl;
 }

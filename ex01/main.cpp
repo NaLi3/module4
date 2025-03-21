@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 11:36:13 by ilevy             #+#    #+#             */
-/*   Updated: 2025/03/21 11:49:47 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/03/21 14:43:03 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,24 @@ int main()
 	std::cout << "In order to test if the copies are deep or shallow, we need to compare their memory addresses" << std::endl;
 	std::cout << "\n\nThese are default tests to make sure there are no leaks" << std::endl;
 	
-	const Animal *i = new Dog();
-	const Animal *j = new Cat();
+	const Animal *dog = new Dog();
+	const Animal *cat = new Cat();
 	
-	Cat catty;
+	delete dog;
+	delete cat;
+
+	Cat catty("salut");
 	Cat simply = catty;
 	catty.compareCat(simply);
-	delete i;
-	delete j;
-
-
+	
+	const Animal *(animal_array[100]);
+	for (int i = 0; i < 50; i++)
+		animal_array[i] = new Dog();
+	std::cout << "\n\n\n\nCreated the doggies" << std::endl;
+	for (int i = 50; i < 100; i++)
+		animal_array[i] = new Cat();
+	std::cout << "\n\n\n\nCreated the cats" << std::endl;
+	for (int i = 0; i < 100; i++)
+		delete animal_array[i];	
 	return (0);
 }
