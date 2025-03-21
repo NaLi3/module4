@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 11:38:26 by ilevy             #+#    #+#             */
-/*   Updated: 2025/03/18 12:25:47 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/03/21 11:43:31 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Dog:public Animal
 		
 		void makeSound( void ) const;
 		std::string getType(void) const;
+		void	compareDogs( const Dog& comp );
 };
 
 #endif

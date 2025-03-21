@@ -6,12 +6,12 @@
 #    By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 11:36:15 by ilevy             #+#    #+#              #
-#    Updated: 2025/03/18 11:59:54 by ilevy            ###   ########.fr        #
+#    Updated: 2025/03/21 10:14:41 by ilevy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Program Name:
-NAME:= Don'tWannaSetTheWorldOnFire
+NAME:= DontWannaSetTheWorldOnFire
 
 #CPP Compiler and flags
 CPP:= c++
